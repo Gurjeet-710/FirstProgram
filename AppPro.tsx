@@ -11,7 +11,7 @@ function AppPro(): JSX.Element {
             </Text>
             <Text style={styling.text}>
              <Text style={isDarkMode ? styling.text: styling.text}>
-                Second line of React Native
+                Second line of React Native JS
             </Text>
             </Text>
         </View>
