@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ScrollView, Image, Touchable, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, Image, Touchable, TouchableOpacity, StatusBar } from 'react-native'
 import React from 'react'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
 import PlaceInfo from './places/PlaceInfo'
@@ -6,8 +6,10 @@ import PlaceInfo from './places/PlaceInfo'
 export default function Test() {
     
   return (
-    <View >
     
+    <View >
+        
+    <StatusBar barStyle={'light-content'} backgroundColor={'blue'} ></StatusBar>
         <ScrollView horizontal={true}>
      <View style={styles.container}>
         <View  style={[ styles.block, styles.blockColor]}>

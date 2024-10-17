@@ -44,8 +44,8 @@ export default function Jaipur() {
 
 const styles = StyleSheet.create({
     container:{
-        width:370,
-        height:1150,
+        width:'90%',
+        height:'auto',
        backgroundColor:'#4F2212',
         margin:20,
         marginTop:10,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     },
 
     image:{
-        width:356,
+        width:'auto',
         height:300,
         padding:4,
         margin: 7,

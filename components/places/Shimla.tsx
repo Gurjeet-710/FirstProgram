@@ -48,8 +48,9 @@ export default function Shimla() {
 
 const styles = StyleSheet.create({
     container:{
-        width:370,
-        height:1200,
+      flex:1,
+        width:'90%',
+        height:'auto',
        backgroundColor:'#4F3BC2',
         margin:20,
         marginTop:10,
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
     },
 
     image:{
-        width:356,
+        width:'auto',
         height:300,
         padding:4,
         margin: 7,

@@ -26,6 +26,8 @@ export default function PlaceInfo() {
             <Text style={styles.text}></Text>
             <Text style={styles.text}></Text>
             <Text style={styles.text}></Text>
+
+            
         </View>
       </View>
      
@@ -35,8 +37,9 @@ export default function PlaceInfo() {
 
 const styles = StyleSheet.create({
     container:{
-        width:370,
-        height:1100,
+      flex:1,
+        width:'90%',
+        height:'100%',
        backgroundColor:'#FAD02E',
         margin:20,
         marginTop:10,
@@ -56,7 +59,7 @@ const styles = StyleSheet.create({
     },
 
     image:{
-        width:356,
+        width:'95%',
         height:300,
         padding:4,
         margin: 7,

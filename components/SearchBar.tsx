@@ -25,8 +25,9 @@ export default function SearchBar() {
     
 const styles = StyleSheet.create({
     container:{
-        width: 370,
-        height: 48,
+      flex:1,
+        width: '90%',
+        height: '10%',
         borderWidth:1,
         borderColor:'black',
         borderRadius:15,

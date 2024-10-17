@@ -53,8 +53,8 @@ export default function JandK() {
 
 const styles = StyleSheet.create({
     container:{
-        width:370,
-        height:1250,
+        width:'90%',
+        height:'auto',
        backgroundColor:'#86C18F',
         margin:20,
         marginTop:10,
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
         textShadowRadius:9,
     },
     image:{
-        width:356,
+        width:'auto',
         height:300,
         padding:4,
         margin: 7,
