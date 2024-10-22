@@ -1,17 +1,17 @@
 import { Image, StyleSheet, Text, View, ScrollView } from 'react-native'
 import React from 'react'
 
-export default function Jaipur() {
+export default function Jaipur({ navigation }) {
   return (
-    <View>
-        
-      <View style={styles.container} >
-        <Text style={styles.heading}>JAIPUR</Text>
-        <Image 
+    <View style={{ flex: 1 }}>
+      <ScrollView>
+        <View style={styles.container} >
+          <Text style={styles.heading}>JAIPUR</Text>
+          <Image
             style={styles.image}
-            source={{uri:'https://th.bing.com/th/id/OIP.Paq060V_sg9Y-W-iwWnhdQHaFg?rs=1&pid=ImgDetMain',}}
-                />
-        <View >
+            source={{ uri: 'https://th.bing.com/th/id/OIP.Paq060V_sg9Y-W-iwWnhdQHaFg?rs=1&pid=ImgDetMain', }}
+          />
+          <View >
 
             <Text style={styles.text}>Jaipur, the capital of Rajasthan, is known for its rich history and stunning architecture. Here are some must-visit tourist places in Jaipur:
             </Text>
@@ -35,52 +35,52 @@ export default function Jaipur() {
             </Text>
             <Text style={styles.text}>10. Jaipur Wax Museum : Features lifelike wax figures of celebrities and historical figures.
             </Text>
+          </View>
         </View>
-      </View>
-     
+      </ScrollView>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-    container:{
-        width:'90%',
-        height:'auto',
-       backgroundColor:'#4F2212',
-        margin:20,
-        marginTop:10,
-        borderRadius:20,
-        shadowColor:'green',
-        shadowRadius:50
-    },
+  container: {
+    width: '90%',
+    height: 'auto',
+    backgroundColor: '#4F2212',
+    margin: 20,
+    marginTop: 10,
+    borderRadius: 20,
+    shadowColor: 'green',
+    shadowRadius: 50
+  },
 
-    heading:{    
-        textAlign:'center',
-        fontWeight:'bold',
-        fontSize:25,
-        color:'#EAF0F1',
-        margin:10,
-        textShadowColor:'black',
-        textShadowRadius:9,
-    },
+  heading: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 25,
+    color: '#EAF0F1',
+    margin: 10,
+    textShadowColor: 'black',
+    textShadowRadius: 9,
+  },
 
-    image:{
-        width:'auto',
-        height:300,
-        padding:4,
-        margin: 7,
-        borderRadius:20,
-        shadowColor:'#FAD02E',
-        marginTop:0
-    },
+  image: {
+    width: 'auto',
+    height: 300,
+    padding: 4,
+    margin: 7,
+    borderRadius: 20,
+    shadowColor: '#FAD02E',
+    marginTop: 0
+  },
 
-    text:{
-        padding:10,
-        fontSize:15,
-        fontWeight:'semibold',
-        color:'#DAD5F2',
-        textShadowColor:'black',
-        textShadowRadius:3,
-    }
-    
+  text: {
+    padding: 10,
+    fontSize: 15,
+    fontWeight: 'semibold',
+    color: '#DAD5F2',
+    textShadowColor: 'black',
+    textShadowRadius: 3,
+  }
+
 })

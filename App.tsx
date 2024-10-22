@@ -1,41 +1,27 @@
-import { View, Text ,StyleSheet,ScrollView} from 'react-native'
+import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import React, { useState } from 'react'
-import Test from './components/Test'
+import Test from './components/Elevation'
 import SearchBar from './components/SearchBar'
-import PlaceInfo from './components/places/PlaceInfo'
+import PlaceInfo from './components/places/Delhi'
 import Shimla from './components/places/Shimla'
 import Jaipur from './components/places/Jaipur'
 import JandK from './components/places/JandK'
+import ClickView from './components/ClickView'
+
 
 
 
 const App = () => {
   return (
-    <View style={{flex:1}}>
-      <ScrollView>
-      <Text style={{fontSize:8}}>made by Gurjeet Singh</Text>
-      <Text style={styles.Heading}>
-      TOURISUM</Text>
-      <SearchBar />
-      <Test />
-      <PlaceInfo />
-      <Shimla />
-      <Jaipur />
-      <JandK />
+    <View style={{ flex: 1 }}>
       
-      </ScrollView>
-   </View>
+      <ClickView />
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
-Heading:{
-  textAlign: 'center',
-  fontSize: 24,
-  fontWeight:'bold',
-  color:'black',
-  fontStyle:'italic' 
-},
+  
 })
 
 export default App

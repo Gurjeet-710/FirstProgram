@@ -1,17 +1,17 @@
 import { Image, StyleSheet, Text, View, ScrollView } from 'react-native'
 import React from 'react'
 
-export default function Shimla() {
+export default function Shimla(navigation) {
   return (
-    <View>
-        
-      <View style={styles.container} >
-        <Text style={styles.heading}>SHIMLA</Text>
-        <Image 
+    <View style={{ flex: 1 }}>
+      <ScrollView>
+        <View style={styles.container} >
+          <Text style={styles.heading}>SHIMLA</Text>
+          <Image
             style={styles.image}
-            source={{uri:'https://www.oyorooms.com/blog/wp-content/uploads/2017/11/Feature-Image-min-12.jpg',}} />
-           
-        <View >
+            source={{ uri: 'https://www.oyorooms.com/blog/wp-content/uploads/2017/11/Feature-Image-min-12.jpg', }} />
+
+          <View >
             <Text style={styles.text}>Shimla, the capital of Himachal Pradesh, is known for its beautiful landscapes and colonial architecture. Here are some popular tourist places to visit in Shimla:
             </Text>
             <Text style={styles.text}>1. The Ridge: A large open space in the heart of Shimla, offering stunning views of the mountains and a great spot for leisure walks.
@@ -39,53 +39,53 @@ export default function Shimla() {
             <Text style={styles.text}></Text>
             <Text style={styles.text}></Text>
             <Text style={styles.text}></Text>
+          </View>
         </View>
-      </View>
-     
+      </ScrollView>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-    container:{
-      flex:1,
-        width:'90%',
-        height:'auto',
-       backgroundColor:'#4F3BC2',
-        margin:20,
-        marginTop:10,
-        borderRadius:20,
-        shadowColor:'green',
-        shadowRadius:50
-    },
+  container: {
+    flex: 1,
+    width: '90%',
+    height: 'auto',
+    backgroundColor: '#4F3BC2',
+    margin: 20,
+    marginTop: 10,
+    borderRadius: 20,
+    shadowColor: 'green',
+    shadowRadius: 50
+  },
 
-    heading:{    
-        textAlign:'center',
-        fontWeight:'bold',
-        fontSize:25,
-        color:'#EAF0F1',
-        margin:10,
-        textShadowColor:'black',
-        textShadowRadius:9,
-    },
+  heading: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 25,
+    color: '#EAF0F1',
+    margin: 10,
+    textShadowColor: 'black',
+    textShadowRadius: 9,
+  },
 
-    image:{
-        width:'auto',
-        height:300,
-        padding:4,
-        margin: 7,
-        borderRadius:20,
-        shadowColor:'#FAD02E',
-        marginTop:0
-    },
+  image: {
+    width: 'auto',
+    height: 300,
+    padding: 4,
+    margin: 7,
+    borderRadius: 20,
+    shadowColor: '#FAD02E',
+    marginTop: 0
+  },
 
-    text:{
-        padding:10,
-        fontSize:15,
-        fontWeight:'semibold',
-        color:'#DAD5F2',
-        textShadowColor:'black',
-        textShadowRadius:3,
-    }
-    
+  text: {
+    padding: 10,
+    fontSize: 15,
+    fontWeight: 'semibold',
+    color: '#DAD5F2',
+    textShadowColor: 'black',
+    textShadowRadius: 3,
+  }
+
 })

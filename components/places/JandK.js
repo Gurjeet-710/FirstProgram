@@ -1,17 +1,17 @@
 import { Image, StyleSheet, Text, View, ScrollView } from 'react-native'
 import React from 'react'
 
-export default function JandK() {
+export default function JandK({ navigation }) {
   return (
-    <View>
-        
-      <View style={styles.container} >
-        <Text style={styles.heading}>JAMMU & KASHMIR</Text>
-        <Image 
+    <View style={{ flex: 1 }}>
+      <ScrollView>
+        <View style={styles.container} >
+          <Text style={styles.heading}>JAMMU & KASHMIR</Text>
+          <Image
             style={styles.image}
-            source={{uri:'https://img.veenaworld.com/wp-content/uploads/2023/01/shutterstock_2044050407-scaled.jpg',}}
-                />
-        <View >
+            source={{ uri: 'https://img.veenaworld.com/wp-content/uploads/2023/01/shutterstock_2044050407-scaled.jpg', }}
+          />
+          <View >
 
             <Text style={styles.text}>Jammu and Kashmir is renowned for its breathtaking landscapes, rich culture, and historical sites. Here are some top tourist places to visit:
             </Text>
@@ -44,50 +44,50 @@ export default function JandK() {
             <Text style={styles.text}></Text>
             <Text style={styles.text}></Text>
 
+          </View>
         </View>
-      </View>
-     
+      </ScrollView>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-    container:{
-        width:'90%',
-        height:'auto',
-       backgroundColor:'#86C18F',
-        margin:20,
-        marginTop:10,
-        borderRadius:20,
-        shadowColor:'green',
-        shadowRadius:50
-    
-    },
-    heading:{
-        
-        textAlign:'center',
-        fontWeight:'bold',
-        fontSize:25,
-        color:'#EAF0F1',
-        margin:10,
-        textShadowColor:'black',
-        textShadowRadius:9,
-    },
-    image:{
-        width:'auto',
-        height:300,
-        padding:4,
-        margin: 7,
-        borderRadius:20,
-        shadowColor:'#FAD02E',
-        marginTop:0
-    },
-    text:{
-        padding:10,
-        fontSize:15,
-        fontWeight:'semibold',
-        color:'#7B4617',
-        textShadowColor:'black',
-        textShadowRadius:1,
-    }
+  container: {
+    width: '90%',
+    height: 'auto',
+    backgroundColor: '#86C18F',
+    margin: 20,
+    marginTop: 10,
+    borderRadius: 20,
+    shadowColor: 'green',
+    shadowRadius: 50
+
+  },
+  heading: {
+
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 25,
+    color: '#EAF0F1',
+    margin: 10,
+    textShadowColor: 'black',
+    textShadowRadius: 9,
+  },
+  image: {
+    width: 'auto',
+    height: 300,
+    padding: 4,
+    margin: 7,
+    borderRadius: 20,
+    shadowColor: '#FAD02E',
+    marginTop: 0
+  },
+  text: {
+    padding: 10,
+    fontSize: 15,
+    fontWeight: 'semibold',
+    color: '#7B4617',
+    textShadowColor: 'black',
+    textShadowRadius: 1,
+  }
 })
