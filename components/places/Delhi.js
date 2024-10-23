@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View, ScrollView } from 'react-native'
 import React from 'react'
 
-export default function Delhi({ navigation }) {
+export default function Delhi({ navigation },props) {
   return (
     <View style={{ flex: 1 }}>
       <ScrollView>

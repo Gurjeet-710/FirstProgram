@@ -1,35 +1,35 @@
-import { StyleSheet, Text, View, ScrollView, Image, Touchable, TouchableOpacity, StatusBar, TextInput } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, Image, Touchable, TouchableOpacity, StatusBar, TextInput, ImageBackground } from 'react-native'
 import React from 'react'
 import PlaceInfo from './places/Delhi'
+import SearchBar from './SearchBar'
 
 
-export default function Elevation({ navigation }) {
+export default function Elevation({navigator}) {
 
     return (
-
         <View >
              <StatusBar barStyle={'light-content'} backgroundColor={'#7C45A9'} ></StatusBar>
+             <ImageBackground 
+                source={require('./assets/image/background.jpg')}
+                style={styles.BackGround}
+             >
             <Text style={styles.Heading}>
                 TOURISUM</Text>
-
-            <View style={styles.container} >
-                <Image
-                    style={{ width: 35, height: 30, margin: 6 }}
-                    source={{ uri: 'https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_1280.png' }}
-                />
-                <TextInput
-                    style={styles.search}
-                    placeholder='search...'
-                    textAlign='left'
-                />
-            </View>
-
+                
+            <SearchBar />
            
-            <View>
-            <ScrollView horizontal={true}>
-                <View style={styles.container2}>
+            
+                
+                <View style={styles.container}>
+                {/* <ImageBackground 
+                source={require('./assets/image/background1.png')}
+                style={styles.BackGround2}
+             > */}
+               
+                <ScrollView horizontal={true} >
+                   
                     <View style={[styles.block, styles.blockColor]}>
-
+                    
                         <TouchableOpacity
                             onPress={() => navigation.navigate("Delhi")}>
                             <Image style={styles.image}
@@ -66,45 +66,61 @@ export default function Elevation({ navigation }) {
                             <Text style={styles.Txt}>J & K</Text>
                         </TouchableOpacity>
                     </View>
-
+                    
+                    </ScrollView>
+                    {/* </View> */}
+                    {/* </ImageBackground> */}
+                   
                 </View>
-            </ScrollView>
+           
+            
+        </ImageBackground>
             </View>
-        </View>
+           
+        
 
     )
 }
 
 
 const styles = StyleSheet.create({
-    container: {
-        // flex: 1,
-        width: '90%',
-        height: '12%',
-        borderWidth: 1,
-        borderColor: 'black',
-        borderRadius: 15,
-        margin: 10,
-        color: '#25CCF7',
-        marginLeft: 20,
-        flexDirection: 'row'
-
-    },
+    BackGround:{
+        // flex:1,
+        resizeMode: 'cover',  
+        justifyContent: 'flex-start',
+        width:'100%',
+        height:'100%',
+        // opacity:0.3  
+        },
+        BackGround2:{
+            flex:1,
+            resizeMode:'contain',  
+            justifyContent: 'center',
+            width:'100%',
+            height:'100%',
+             
+            },
+   
+   
     Heading: {
         textAlign: 'center',
         fontSize: 24,
         fontWeight: 'bold',
-        color: 'black',
+        color: '#280C0D',
         fontStyle: 'italic'
-    },
-    search: {
-        // flex: 1,
-        padding: 2,
-    },
 
-    container2: {
+    },
+   
+
+    container: {
         // flex: 1,
-        flexDirection: 'row'
+        flexDirection: 'row',
+        justifyContent:'center',
+        // backgroundColor:'#D5E4EB',
+
+        // height:500
+  
+        
     },
     block: {
         // flex: 1,
@@ -113,7 +129,8 @@ const styles = StyleSheet.create({
         height: 200,
         margin: 5,
         borderRadius: 10,
-
+        marginTop:0,
+       
     },
 
     Elivation: {
@@ -122,10 +139,10 @@ const styles = StyleSheet.create({
 
     image: {
         width: 150,
-        height: 202,
+        height: 200,
         borderRadius: 10,
-        marginBottom: -22,
-        marginTop: 0,
+        marginBottom: -25,
+        // marginTop: 0,
     },
 
     blockColor: {
